@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react'
 import styled from "styled-components"
 import MenuIcon from '@mui/icons-material/Menu';
@@ -12,7 +13,7 @@ function Header() {
       // tslint:disable-next-line:typedef
     const scrollTo = (id) => {        
         console.log(id);
-        const element = document.getElementById(id);
+        const element = document.getElementById(id + " wrap");
     
         console.log(element);
         element.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
@@ -70,7 +71,7 @@ const Container = styled.div`
     width: 100%;
     z-index: 1;
     a {
-        padding-right: 12.5%;
+        padding-right: 15.5%;
     }
 `
 
