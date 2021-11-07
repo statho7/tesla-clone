@@ -11,11 +11,9 @@ function Header() {
     const cars = useSelector(selectCars);
 
       // tslint:disable-next-line:typedef
-    const scrollTo = (id) => {        
-        console.log(id);
+    const scrollTo = (id) => {
         const element = document.getElementById(id + " wrap");
-    
-        console.log(element);
+        
         element.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
     }
 
@@ -46,11 +44,8 @@ function Header() {
                 {cars && cars.map((car, index) => 
                     <li><a key={index} onClick={() => scrollTo(car)}>{car}</a></li>
                 )}
-                <li><a>Existing Inventory</a></li>
-                <li><a>Used Inventory</a></li>
-                <li><a>Trade-in</a></li>
-                <li><a>Cybertruck</a></li>
-                <li><a>Roadaster</a></li>
+                <li><a onClick={() => scrollTo("Lowest Cost Solar Panels in America")}>Solar Panels</a></li>
+                <li><a onClick={() => scrollTo("Accessories")}>Accessories</a></li>
             </BurgerNav>
         </Container>
     )
@@ -78,7 +73,7 @@ const Container = styled.div`
 const Menu = styled.div`
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex: 1;
 
     a {
@@ -89,7 +84,7 @@ const Menu = styled.div`
         flex-wrap: nowrap;
     }
 
-    @media(max-width: 876px) {
+    @media(max-width: 900px) {
         display: none;
     }
 `
