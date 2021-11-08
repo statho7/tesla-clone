@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
+## Azure Deployment
+
+This website was deployed on Azure Blob Storage and the link is : https://myteslaclone.azureedge.net/
+
 ## Available Scripts
 
 In the project directory, you can run:
