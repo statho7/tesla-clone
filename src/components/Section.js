@@ -1,17 +1,27 @@
 import React from 'react'
 import styled from "styled-components"
 import Fade from 'react-reveal/Fade'
+import Flip from 'react-reveal/Flip';
+import Bounce from 'react-reveal/Bounce';
+import RubberBand from 'react-reveal/RubberBand';
+import Rotate from 'react-reveal/Rotate';
 
 function Section({ title, description, backgroundImage, leftButtonText, rightButtonText }) {
     
     return (
         <Wrap bgImage = {backgroundImage} id={title + ' wrap'}>
-            <Fade bottom>
+            {/* <Fade bottom> */}
+            {/* <Flip left> */}
+            {/* <Bounce left> */}
+            <Rotate top left>
                 <ItemText>
                     <h1> { title } </h1>
                     <p> { description } </p>
                 </ItemText>
-            </Fade>
+            {/* </Flip> */}
+            {/* </Bounce> */}
+            </Rotate>
+            {/* </Fade> */}
             <Buttons>
                 <Fade bottom>
                     <ButtonGroup>
